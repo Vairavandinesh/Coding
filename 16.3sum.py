@@ -1,8 +1,8 @@
 def threesum(nums):
     nums.sort()
     dummy=[]
-    for i in range(len(nums)):
-        if(i>0 and nums[i]==nums[i-1]):
+    for i in range(1,len(nums)):
+        if(nums[i]==nums[i-1]):
             continue
         j=i+1
         k=len(nums)-1
