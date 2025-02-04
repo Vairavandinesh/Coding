@@ -1,11 +1,14 @@
-a=10
-b=20
-if (a%b==0 and b%b==0):
-    print(b)
-elif (a%b!=0 or b%b!=0):
-    for i in range(a*b,a,-1):
-        if (a%b==0 and b%b==0):
-            print(i)
-else:
-    print(a*b)
-
+#using math module
+import math
+a=int(input("Enter n1:"))
+b=int(input("Enter n2:"))
+lcm=math.lcm(a,b)
+print(lcm)
+#with any module
+def lcm(a,b):
+    greater=max(a,b)
+    while True:
+        if greater%a==0 and greater%b==0:
+            return greater
+        greater+=1
+print(lcm(a,b))
